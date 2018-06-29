@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_resouce %} {% static 'users/css/utilisateurs.css' %} {% endblock %}
+{% block external_resources %}
+  <link href="{% static 'users/css/vis.min.css' %}" rel="stylesheet" type="text/css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block general %}
+{% if user.is_authenticated %}
+{% block header %}
+<div class="header">
+<div class="logo">
+  <a href="{% url 'accueil' %}" class="logolink">
+    <div class="logofonticons">
+      <div class="icon-fonta">
+        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span>
+      </div>
+      <div class="icon-fontg">
+        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span>
+      </div>
+    </div>
+    <div class="logotext">
+      <p class="plogotext">ALGO DES GRAPHES</p>
+    </div>
+  </a>
+</div>
+{% block headmenu %}
+  <div class="headmenu">
+    <a href="{% url 'logout' %}" class="signoutlink">
+      <div class="signout">
+        <p class="psignout"><i class="fas fa-sign-out-alt"></i> Se déconnecter</p>
+      </div>
+    </a>
+    <div class="hiuser">
+      <p class="phiuser"><i class="fas fa-user"></i> {{ user.username|truncatechars:15 }}</p>
+    </div>
+  </div>
+{% endblock %}
+</div>
+{% endblock %}
+
+{% block body %}
+  <div id="d0">
+    <div id="d01">
+      <div id="exo">
+        <div id="dimgexo">
+          <img src="{% static 'users/images/exo.png' %}" alt="image exercice" id="imgexo">
+        </div>
+        <div id="menuexo">
+          <p id="dijkstra">DIJKSTRA</p>
+          <p id="bellmanford">BELLMAN-FORD</p>
+          <p id="cliques">CLIQUES</p>
+          <p id="exoacm">ACM</p>
+          <p id="exocfc">CFC</p>
+        </div>
+      </div>
+      <div id="cours">
+        <div id="dimgcours">
+          <img src="{% static 'users/images/cours.png' %}" alt=" image cours" id="imgcours">
+        </div>
+        <div id="menucours">
+          <p id="coursparcours">PARCOURS</p>
+          <p id="pcc">PCC</p>
+          <p id="coursacm">ACM</p>
+          <p id="coursetc">...</p>
+        </div>
+      </div>
+      <div id="aleat">
+        <div id="dimgaleat">
+          <img src="{% static 'users/images/aleat2.png' %}" alt="image aléatroire" id="imgaleat">
+        </div>
+      </div>
+    </div>
+    <div id="d02">
+      <div id="navig">
+        <p id="nexo">EXERCICES</p>
+        <p id="ncours">COURS</p>
+        <p id="naleat">GRAPHES ALEATOIRES</p>
+      </div>
+      <div id="graphe">
+
+      </div>
+      <div id="reponse">
+
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block js_resource %}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script id= "vis" type="text/javascript" src="{% static 'users/js/vis.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'users/js/exercice.js' %}"></script>
+  <script src="{% static 'users/js/jquery.js' %}"></script>
+  <script type="text/javascript">
+    /* +++++++++++ menus déroulants  +++++++++++ */
+    $(document).ready(function(){
+      $('#imgexo').mouseenter(function(){
+        $('#menuexo').show('fast');
+      });
+      $('#exo').mouseleave(function(){
+        $('#menuexo').hide('fast');
+      });
+      $('#imgcours').mouseenter(function(){
+        $('#menucours').show('fast');
+      });
+      $('#cours').mouseleave(function(){
+        $('#menucours').hide('fast');
+      });
+    });
+    /* +++++++++++++++++++++++++++++++++++++++++ */
+    /* +++++++++++ affichage exercies +++++++++++ */
+    var triggerExo = document.getElementById('imgexo');
+    var containerExo = document.getElementById('d02');
+    var containerAnswer = document.getElementById('reponse');
+
+    var dijk = document.getElementById('dijkstra');
+    var bell = document.getElementById('bellmanford');
+    var cliq = document.getElementById('cliques');
+    var acm = document.getElementById('exoacm');
+    var cfc = document.getElementById('exocfc');
+
+    var triggerExo2 = document.getElementById('nexo');
+
+    function exAlea(){
+      displayExo();
+      runScript();
+    }
+    function exDijk(){
+      displayExo();
+      runScript("dijkstra");
+    }
+    function exBell(){
+      displayExo();
+      runScript("bellmanford");
+    }
+    function excliq(){
+      displayExo();
+      runScript("clique");
+    }
+    function exAcm(){
+      displayExo();
+      runScript("acm");
+    }
+    function exCfc(){
+      displayExo();
+      runScript("cfc");
+    }
+
+    function displayExo(){
+      containerExo.style.zIndex = "100";
+      containerAnswer.innerHTML = '<div id="question"> </div>'+
+        '<div id="choi">'+
+          '<div class="rad"><input id="choix1" type="radio" name="choix" > <span id="choix1S"></span></input></div>'+
+          '<div class="rad"><input id="choix2" type="radio" name="choix" > <span id="choix2S"></span></input></div>'+
+          '<div class="rad"><input id="choix3" type="radio" name="choix" > <span id="choix3S"></span></input></div>'+
+          '<div class="rad"><input id="choix4" type="radio" name="choix" > <span id="choix4S"></span></input></div>'+
+        '</div>'+
+        '<div>'+
+          '<button value="Valider" onclick="reponse()" id="boutonvalid"> Valider </button>'+
+          '<button value="Question suivante" onclick="runScript()" id="boutonsuiv"> Question suivante </button>'+
+        '</div>'+
+        '<div>'+
+          '<p id="typeexo">Choisir le type d\'exercices</p>'+
+          '<button value="Random" onclick="runScript(\'random\')" id="boutonaleat"> Aléatoire </button>'+
+          '<button value="Dijkstra" onclick="runScript(\'dijkstra\')" id="boutondijkstra"> Dijkstra </button>'+
+          '<button value="Bellman-Ford" onclick="runScript(\'bellmanford\')" id="boutonbellmanford"> Bellman-Ford </button>'+
+          '<button value="Clique" onclick="runScript(\'clique\')" id="boutonclique"> Cliques </button>'+
+          '<button value="Acm" onclick="runScript(\'acm\')" id="boutonacm"> ACM </button>'+
+          '<button value="Cfc" onclick="runScript(\'cfc\')" id="boutoncfc"> CFC </button>'+
+        '</div>';
+    }
+    triggerExo.addEventListener('click', exAlea);
+    dijk.addEventListener('click', exDijk);
+    bell.addEventListener('click', exBell);
+    cliq.addEventListener('click', excliq);
+    acm.addEventListener('click', exAcm);
+    cfc.addEventListener('click', exCfc);
+    triggerExo2.addEventListener('click', exAlea);
+
+    /* +++++++++++++++++++++++++++++++++++++++++ */
+  </script>
+{% endblock %}">
+
+{% else %}
+<p><a href="{% url 'signup' %}">Sign Up</a></p>
+<p><a href="{% url 'login' %}">Log In </a></p>
+{% endif %}
+{% endblock %}">

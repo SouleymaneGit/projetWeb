@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/projet/css/base.css">
+    <link rel="stylesheet" href="{% block css_resouce %}  {% endblock %}">
+    {% block external_resources %}
+
+    {% endblock %}
+    <title>{% block title %}  {% endblock %}</title>
+  </head>
+  <body>
+    {% block general %}
+    {% block header %}
+      <div class="header">
+        <div class="logo">
+          <a href="{% url 'accueil' %}" class="logolink">
+            <div class="logofonticons">
+              <div class="icon-fonta">
+                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span>
+              </div>
+              <div class="icon-fontg">
+                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span>
+              </div>
+            </div>
+            <div class="logotext">
+              <p class="plogotext">ALGO DES GRAPHES</p>
+            </div>
+          </a>
+        </div>
+
+        {% block headmenu %}
+
+        {% endblock %}
+      </div>
+    {% endblock %}
+
+    {% block body %}
+
+    {% endblock %}
+
+    {% block footer %}
+
+    {% endblock %}
+
+    {% block js_resource %}
+
+    {% endblock %}
+    {% endblock %}
+  </body>
+</html>

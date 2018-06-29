@@ -1,0 +1,250 @@
+#d0{
+  position: relative;
+}
+#d01{
+  display: flex;
+  position: absolute;
+  background: -webkit-linear-gradient(top, rgb(83, 169, 255), rgb(0, 92, 185));
+  background: -o-linear-gradient(bottom, rgb(83, 169, 255), rgb(0, 92, 185));
+  background: -moz-linear-gradient(bottom, rgb(83, 169, 255), rgb(0, 92, 185));
+  background: linear-gradient(to bottom, rgb(83, 169, 255), rgb(0, 92, 185));
+  z-index: 5;
+}
+#exo, #cours, #aleat{
+  height: 450px;
+  width: 15%;
+  margin: auto;
+  margin-top: 50px;
+}
+#exo{
+  margin-left: 20%;
+}
+#aleat{
+  margin-right: 20%;
+}
+#dimgexo, #dimgcours, #dimgaleat{
+  height: 45.2%;
+}
+#menuexo, #menucours{
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: none;
+  width: auto;
+}
+#imgexo, #imgcours, #imgaleat{
+  width: 100%;
+  border: solid white 1px;
+  border-radius: 1px;
+
+  filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+  -moz-filter: brightness(90%);
+  -o-filter: brightness(90%);
+  -ms-filter: brightness(90%);
+}
+#imgexo:hover, #imgcours:hover, #imgaleat:hover{
+  cursor: pointer;
+
+  filter: brightness(100%);
+  -webkit-filter: brightness(100%);
+  -moz-filter: brightness(100%);
+  -o-filter: brightness(100%);
+  -ms-filter: brightness(100%);
+}
+#cliques, #dijkstra, #bellmanford, #exoacm, #exocfc, #coursparcours, #pcc, #coursacm, #coursetc{
+  width: 100%;
+  border: solid white 1px;
+  border-radius: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+}
+#cliques, #dijkstra, #bellmanford, #exoacm, #exocfc{
+  background-color: rgb(229, 184, 75);
+}
+#coursparcours, #pcc, #coursacm, #coursetc{
+  background-color: rgb(120, 192, 132);
+}
+#cliques:hover, #dijkstra:hover, #bellmanford:hover, #exoacm:hover, #exocfc:hover{
+  background-color: rgb(255, 205, 83);
+  cursor: pointer;
+}
+#coursparcours:hover, #pcc:hover, #coursacm:hover, #coursetc:hover{
+  background-color: rgb(133, 213, 147);
+  cursor: pointer;
+}
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#d02{
+  display: flex;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 500px;
+  background: -webkit-linear-gradient(top, rgb(83, 169, 255), rgb(0, 92, 185));
+  background: -o-linear-gradient(bottom, rgb(83, 169, 255), rgb(0, 92, 185));
+  background: -moz-linear-gradient(bottom, rgb(83, 169, 255), rgb(0, 92, 185));
+  background: linear-gradient(to bottom, rgb(83, 169, 255), rgb(0, 92, 185));
+}
+#navig, #graphe, #reponse{
+  height: 460px;
+  margin: auto;
+}
+#navig{
+  width: 14.5%;
+  margin-left: 5%;
+  margin-right: 0.5%;
+  text-align: center;
+}
+#graphe{
+  width: 50%;
+  border-radius: 2px;
+  background-color: white;
+}
+#reponse{
+  width: 23.5%;
+  border-radius: 2px;
+  margin-right: 5%;
+  margin-left: 0.5%;
+  background-color: white;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  height: 446px;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+}
+#nexo, #ncours, #naleat{
+  border: solid white 1px;
+  border-radius: 1px;
+  line-height: 40px;
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+
+  background: -webkit-linear-gradient(top, rgb(118, 188, 150), rgb(92, 175, 130));
+  background: -o-linear-gradient(bottom, rgb(118, 188, 150), rgb(92, 175, 130));
+  background: -moz-linear-gradient(bottom, rgb(118, 188, 150), rgb(92, 175, 130));
+  background: linear-gradient(to bottom, rgb(118, 188, 150), rgb(92, 175, 130));
+
+  filter: brightness(95%);
+  -webkit-filter: brightness(95%);
+  -moz-filter: brightness(95%);
+  -o-filter: brightness(95%);
+  -ms-filter: brightness(95%);
+}
+#nexo{
+  margin-top: 1px;
+}
+#nexo:hover, #ncours:hover, #naleat:hover{
+  cursor: pointer;
+
+  filter: brightness(100%);
+  -webkit-filter: brightness(100%);
+  -moz-filter: brightness(100%);
+  -o-filter: brightness(100%);
+  -ms-filter: brightness(100%);
+}
+#question{
+  height: 50px;
+  font-size: 14px;
+  color: rgb(80, 80, 80);
+  margin-bottom: 7px;
+}
+#choi{
+  font-size: 13px;
+}
+.rad{
+  height: 25px;
+  color: rgb(80, 80, 80);
+}
+#boutonvalid, #boutonsuiv{
+  margin-top: 5px;
+  height: 25px;
+  color: white;
+  border-radius: 1px;
+}
+#boutonvalid{
+  background: -webkit-linear-gradient(top, rgb(60, 193, 83), rgb(48, 156, 67));
+  background: -o-linear-gradient(bottom, rgb(60, 193, 83), rgb(48, 156, 67));
+  background: -moz-linear-gradient(bottom, rgb(60, 193, 83), rgb(48, 156, 67));
+  background: linear-gradient(to bottom, rgb(60, 193, 83), rgb(48, 156, 67));
+  width: 22%;
+  margin-right: 1%;
+  border: solid rgb(52, 169, 72) 1px;
+}
+#boutonsuiv{
+  background: -webkit-linear-gradient(top, rgb(230, 123, 108), rgb(174, 48, 30));
+  background: -o-linear-gradient(bottom, rgb(230, 123, 108), rgb(174, 48, 30));
+  background: -moz-linear-gradient(bottom, rgb(230, 123, 108), rgb(174, 48, 30));
+  background: linear-gradient(to bottom, rgb(230, 123, 108), rgb(174, 48, 30));
+  width: 40%;
+  margin-left: 1%;
+  border: solid rgb(192, 53, 33) 1px;
+}
+#boutonvalid:hover, #boutonsuiv:hover{
+  cursor: pointer;
+}
+#boutonaleat, #boutondijkstra, #boutonbellmanford, #boutonclique, #boutonacm, #boutoncfc{
+  display: block;
+  width: 40%;
+  height: 30px;
+  border: solid rgb(150, 150, 150) 1px;
+  border-radius: 1px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: rgb(80, 80, 80);
+  background: -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(215, 215, 215));
+  background: -o-linear-gradient(bottom, rgb(255, 255, 255), rgb(215, 215, 215));
+  background: -moz-linear-gradient(bottom, rgb(255, 255, 255), rgb(215, 215, 215));
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(215, 215, 215));
+}
+#boutonaleat:hover, #boutondijkstra:hover, #boutonbellmanford:hover, #boutonclique:hover, #boutonacm:hover, #boutoncfc:hover{
+  border: solid rgb(100, 100, 100) 1px;
+  color: rgb(50, 50, 50);
+  cursor: pointer;
+}
+#typeexo{
+  margin-bottom: 7px;
+  font-size: 14px;
+  color: rgb(80, 80, 80);
+}
+/*-----------------------------------------------------------------------------------*/
+.headmenu{
+  width: 30%;
+  height: 45%;
+  margin: auto;
+  margin-right: 8%;
+  display: flex;
+}
+.hiuser{
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+  color: rgb(42, 127, 255);
+  margin: auto;
+}
+.signout{
+  border: solid rgb(42, 127, 255) 1px;
+  border-radius: 2px;
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+  color: rgb(42, 127, 255);
+}
+.signout:hover{
+  border: solid rgb(0, 75, 185) 1px;
+  color: rgb(0, 75, 185);
+}
+.signoutlink{
+  text-decoration: none;
+  width: 40%;
+  margin: auto;
+}
+.phiuser, .psignout{
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}

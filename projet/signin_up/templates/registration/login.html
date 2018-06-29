@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css_resouce %} {% static 'signin_up/css/login.css' %} {% endblock %}
+{% block title %}Login{% endblock %}
+
+
+
+{% block body %}
+  <div class="bodyconnexion">
+    <div class="dformconnexion">
+      <h2>Connexion</h2>
+      <form method="post"  id="formconnexion">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="boutonconnexion">Se Connecter</button>
+      </form>
+    </div>
+    <div class="dimgconnexion">
+        <img src="{% static 'signin_up/images/login_background.jpg' %}" alt="image de l'accueil" class="img_home_background"/>
+    </div>
+  </div>
+{% endblock %}

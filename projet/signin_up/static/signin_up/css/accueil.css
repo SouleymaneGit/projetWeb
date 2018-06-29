@@ -1,0 +1,63 @@
+.headmenu{
+  width: 30%;
+  height: 45%;
+  margin: auto;
+  margin-right: 8%;
+  display: flex;
+}
+.signinlink, .signuplink{
+  text-decoration: none;
+  width: 40%;
+  margin: auto;
+}
+.signin{
+  border: solid rgb(42, 127, 255) 1px;
+  border-radius: 2px;
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+  color: rgb(42, 127, 255);
+}
+.signin:hover{
+  border: solid rgb(0, 75, 185) 1px;
+  color: rgb(0, 75, 185);
+}
+.signup{
+  background-color: rgb(66, 141, 255);
+  border: solid rgb(42, 127, 255) 1px;
+  border-radius: 2px;
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+  color: white;
+}
+.signup:hover{
+  background-color: rgb(0, 75, 185);
+}
+.ident, .inscr{
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.img_home_background{
+  width: 100%;
+}
+/* ----------------------------------------------------------- */
+.footer{
+  display: flex;
+  padding: 10px;
+}
+.istic, .rennes1, .contact{
+  width: 20%;
+  margin: auto;
+}
+.img_istic, .img_rennes1{
+  width: 100%;
+}
+.contact{
+  text-align: center;
+}
+.contactlink{
+  text-decoration: none;
+}

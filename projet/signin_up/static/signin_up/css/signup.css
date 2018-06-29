@@ -1,0 +1,22 @@
+.dforminscription{
+  position: absolute;
+  border: solid white 1px;
+  width: 65%;
+  z-index: 10;
+  top: 180px;
+}
+.boutoninscription{
+  margin-bottom: 20px;
+  width: 20%;
+  height: 30px;
+}
+
+.dimginscription{
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  z-index: 5;
+}
+.img_home_background{
+  width: 100%;
+}

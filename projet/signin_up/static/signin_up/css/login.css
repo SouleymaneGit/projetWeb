@@ -1,0 +1,24 @@
+.dformconnexion{
+  position: absolute;
+  border: solid white 1px;
+  width: 30%;
+  text-align: center;
+  z-index: 10;
+  top: 180px;
+  left: 200px;
+}
+.boutonconnexion{
+  margin-bottom: 20px;
+  width: 40%;
+  height: 30px;
+}
+
+.dimgconnexion{
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  z-index: 5;
+}
+.img_home_background{
+  width: 100%;
+}

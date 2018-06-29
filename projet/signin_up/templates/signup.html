@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css_resouce %} {% static 'signin_up/css/signup.css' %} {% endblock %}
+{% block title %}singup{% endblock %}
+
+
+{% block body %}
+
+
+  <div class="bodyinscription">
+    <div class="dforminscription">
+      <h2>Inscription</h2>
+      <form method="post"  id="forminscription">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="boutoninscription">S'inscrire</button>
+      </form>
+    </div>
+    <div class="dimginscription">
+        <img src="{% static 'signin_up/images/signup_background.jpg' %}" alt="image de l'accueil" class="img_home_background"/>
+    </div>
+  </div>
+{% endblock %}
